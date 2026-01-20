@@ -49,7 +49,14 @@ spec:
    BUCKET_PORT: "80"
    BUCKET_REGION: usdc-east
 ```
-
+```
+mc alias set udayk-lifecycle https://rook-ceph-objstore-east.kus.logistics.corp ZAPZ3C3KX9DHGFU00KN9 wuJreSkQhLomDgNPltg9wdp7ioaDzLcKylSQnWIr
+mc cp LoggingUtil-0.0.1.jar udayk-lifecycle/udayk-lifecycle-826f298a-e722-4311-8c01-f2f467fba135
+mc cp newsupportbundle.zip udayk-lifecycle/udayk-lifecycle-826f298a-e722-4311-8c01-f2f467fba135
+mc cp test-file-2 udayk-lifecycle/udayk-lifecycle-826f298a-e722-4311-8c01-f2f467fba135
+mc cp test-file-1 udayk-lifecycle/udayk-lifecycle-826f298a-e722-4311-8c01-f2f467fba135
+mc ls udayk-lifecycle/udayk-lifecycle-826f298a-e722-4311-8c01-f2f467fba135
+```
 - used following snippet for creating without life cycle snippet - udayk-no-lifecycle is the bucket name
 
 ```
