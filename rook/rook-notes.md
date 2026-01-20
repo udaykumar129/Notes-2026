@@ -3,7 +3,7 @@
 
 - Create a bucket in USDC East with life cycle snippet and without snippet
 - check if we are creating it with snippet is actually deleting it or not
-- used following snippet for creating with life cycle snippet
+- used following snippet for creating with life cycle snippet - udayk-lifecycle is the bucket name
 
 ```
 apiVersion: objectbucket.io/v1alpha1
@@ -41,7 +41,16 @@ spec:
       }
 ```
 
-- used following snippet for creating without life cycle snippet
+```
+   AWS_ACCESS_KEY_ID: ZAPZ3C3KX9DHGFU00KN9
+   AWS_SECRET_ACCESS_KEY: wuJreSkQhLomDgNPltg9wdp7ioaDzLcKylSQnWIr
+   BUCKET_HOST: https://rook-ceph-objstore-east.kus.logistics.corp
+   BUCKET_NAME: udayk-lifecycle-826f298a-e722-4311-8c01-f2f467fba135
+   BUCKET_PORT: "80"
+   BUCKET_REGION: usdc-east
+```
+
+- used following snippet for creating without life cycle snippet - udayk-no-lifecycle is the bucket name
 
 ```
 apiVersion: objectbucket.io/v1alpha1
