@@ -40,3 +40,28 @@ spec:
         ]
       }
 ```
+
+- used following snippet for creating without life cycle snippet
+
+```
+apiVersion: objectbucket.io/v1alpha1
+kind: ObjectBucketClaim
+metadata:
+  annotations:
+
+  finalizers:
+  - objectbucket.io/finalizer
+  generation: 4
+  labels:
+    bucket-provisioner: rook-ceph.ceph.rook.io-bucket
+  name: udayk-no-lifecycle
+  namespace: rook-ceph
+
+spec:
+  bucketName:
+  generateBucketName: udayk-no-lifecycle
+
+  storageClassName: rook-ceph-bucket
+  additionalConfig:
+    maxSize: "5G"
+```
