@@ -99,3 +99,25 @@ mc cp test-file-2 udayk-no-lifecycle/udayk-no-lifecycle-72514acf-51a0-453c-8b38-
 mc cp test-file-1 udayk-no-lifecycle/udayk-no-lifecycle-72514acf-51a0-453c-8b38-691144f8287c
 mc ls udayk-no-lifecycle/udayk-no-lifecycle-72514acf-51a0-453c-8b38-691144f8287c
 ```
+
+- After creating the bucket without life cycle - i have created life cycle rule like this by patching exising bucket
+
+```
+kubectl patch obc udayk-no-lifecycle -n rook-ceph --type=merge -p '
+spec:
+  additionalConfig:
+    bucketLifecycle: |
+      {
+        "Rules": [
+          {
+            "ID": "ExpireAfter1Days",
+            "Status": "Enabled",
+            "Prefix": "",
+            "Expiration": {
+              "Days": 1
+            }
+          }
+        ]
+      }'
+'
+```
