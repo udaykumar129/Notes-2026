@@ -90,3 +90,12 @@ spec:
    BUCKET_PORT: "80"
    BUCKET_REGION: usdc-east
 ```
+
+```
+mc alias set udayk-no-lifecycle https://rook-ceph-objstore-east.kus.logistics.corp B59PE1ARTUMUHU25KPK4 kuUPvUCC2BXYG4KHSWDIBgrQCVjM5yUDxzCrADNU
+mc cp LoggingUtil-0.0.1.jar udayk-no-lifecycle/udayk-no-lifecycle-72514acf-51a0-453c-8b38-691144f8287c
+mc cp newsupportbundle.zip udayk-no-lifecycle/udayk-no-lifecycle-72514acf-51a0-453c-8b38-691144f8287c
+mc cp test-file-2 udayk-no-lifecycle/udayk-no-lifecycle-72514acf-51a0-453c-8b38-691144f8287c
+mc cp test-file-1 udayk-no-lifecycle/udayk-no-lifecycle-72514acf-51a0-453c-8b38-691144f8287c
+mc ls udayk-no-lifecycle/udayk-no-lifecycle-72514acf-51a0-453c-8b38-691144f8287c
+```
