@@ -74,3 +74,12 @@ spec:
   additionalConfig:
     maxSize: "5G"
 ```
+
+```
+   AWS_ACCESS_KEY_ID: B59PE1ARTUMUHU25KPK4
+   AWS_SECRET_ACCESS_KEY: kuUPvUCC2BXYG4KHSWDIBgrQCVjM5yUDxzCrADNU
+   BUCKET_HOST: https://rook-ceph-objstore-east.kus.logistics.corp
+   BUCKET_NAME: udayk-no-lifecycle-72514acf-51a0-453c-8b38-691144f8287c
+   BUCKET_PORT: "80"
+   BUCKET_REGION: usdc-east
+```
