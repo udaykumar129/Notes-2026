@@ -121,3 +121,17 @@ spec:
       }'
 '
 ```
+
+## Important ##
+
+- when we set it via obc life cycle is not working. We need to set it via below command only then it is working
+  
+  ```mc ilm add --expiry-days 30 udayk-lifecycle/udayk-lifecycle-826f298a-e722-4311-8c01-f2f467fba135```
+
+- To list ilm rules use below command
+
+  ```mc ilm ls udayk-lifecycle/udayk-lifecycle-826f298a-e722-4311-8c01-f2f467fba135```
+
+- To remove ilm rules use below command
+
+   ```mc ilm rm --id d5p04n844ktdegnc8mqg udayk-lifecycle/udayk-lifecycle-826f298a-e722-4311-8c01-f2f467fba135```
