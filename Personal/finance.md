@@ -21,3 +21,5 @@
   - India bulls has been renamed to this. Still working to resolve issue faced with India bulls
   
       
+## Aviation sector
+- fly sbs - Money purse took some allocation.
