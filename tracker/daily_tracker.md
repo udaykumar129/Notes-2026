@@ -1,1 +1,1 @@
-AD - 1 hr
+kubernetes - 1 hr
