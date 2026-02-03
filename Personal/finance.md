@@ -1,3 +1,6 @@
+## Mutual funds
+- Lesson Learnt - Never to STP from liquid funds, they charge STCG if we sell with in less than 3 years
+
 ## Housing Finance
 ### Affordable Housing Finance
 - Aadhar housing finance
