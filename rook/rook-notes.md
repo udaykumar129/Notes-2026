@@ -135,3 +135,20 @@ spec:
 - To remove ilm rules use below command
 
    ```mc ilm rm --id d5p04n844ktdegnc8mqg udayk-lifecycle/udayk-lifecycle-826f298a-e722-4311-8c01-f2f467fba135```
+
+# zookeeper pod not coming up
+
+error - MountVolume.MountDevice failed for volume "pvc-c4e024ec-a22e-45db-856a-f8f3a00d53f0" : rpc error: code = Aborted desc = an operation with the given Volume ID 0001-0009-rook-ceph-000000000000000c-d8d456d4-dc9a-11ee-b0de-8266df0a1877 already exists
+
+- pvc-c4e024ec-a22e-45db-856a-f8f3a00d53f0 is the pv name
+- pod is running on iahllskube017
+- k get volumeattachment | grep pvc-c4e024ec-a22e-45db-856a-f8f3a00d53f0
+- cordon the node 017
+- have deleted the volume attachment
+- then did k delete pod kafka-east-cp-zookeeper-2 --force --grace-period=0
+- still the same
+- checked for volume attachments again and have deleted them...still the same
+- restarted ds rbd plugins - kubectl rollout restart ds rook-ceph-csi-rbdplugin -n rook-ceph
+- still the same issue
+
+
