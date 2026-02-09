@@ -154,5 +154,8 @@ error - MountVolume.MountDevice failed for volume "pvc-c4e024ec-a22e-45db-856a-f
 - checked pv name again and checking for CSI image name
 - csi-vol-3aadb9b6-dca2-11ee-b0de-8266df0a1877
 - csi-vol-d8d456d4-dc9a-11ee-b0de-8266df0a1877
-
-
+- command to check where all above stale images are mapped
+- for p in $(kubectl -n rook-ceph get pods -l app=csi-rbdplugin -o name); do   echo "==== $p ====";   kubectl -n rook-ceph exec $p -c csi-rbdplugin --     rbd showmapped | grep -E "3aadb9b6|d8d456d4" || true; done
+- i am grepping some part of image id.
+- iahllskube023 & iahllskube021 has these images....
+- getting the node, kubelet and contaierd restarted on these
