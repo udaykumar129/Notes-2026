@@ -150,5 +150,9 @@ error - MountVolume.MountDevice failed for volume "pvc-c4e024ec-a22e-45db-856a-f
 - checked for volume attachments again and have deleted them...still the same
 - restarted ds rbd plugins - kubectl rollout restart ds rook-ceph-csi-rbdplugin -n rook-ceph
 - still the same issue
+- have restarted the node, kubelet and containerd still didnt help
+- checked pv name again and checking for CSI image name
+- csi-vol-3aadb9b6-dca2-11ee-b0de-8266df0a1877
+- csi-vol-d8d456d4-dc9a-11ee-b0de-8266df0a1877
 
 
