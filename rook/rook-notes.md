@@ -159,3 +159,97 @@ error - MountVolume.MountDevice failed for volume "pvc-c4e024ec-a22e-45db-856a-f
 - i am grepping some part of image id.
 - iahllskube023 & iahllskube021 has these images....
 - getting the node, kubelet and contaierd restarted on these
+
+# Creating multiple Objec stores
+
+- on iah-east, i have created this storage class
+
+```
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: rook-ceph-bucket-new
+provisioner: rook-ceph.ceph.rook.io/bucket
+parameters:
+  objectStoreName: ceph-object-store-new
+  objectStoreNamespace: rook-ceph
+reclaimPolicy: Delete
+```
+- i have created following object store as well
+
+```
+apiVersion: ceph.rook.io/v1
+kind: CephObjectStore
+metadata:
+  name: ceph-object-store-new
+  namespace: rook-ceph
+spec:
+  preservePoolsOnDelete: true
+
+  metadataPool:
+    failureDomain: host
+    replicated:
+      size: 3
+    compressionMode: none
+
+  dataPool:
+    failureDomain: host
+    erasureCoded:
+      dataChunks: 2
+      codingChunks: 1
+    compressionMode: none
+
+  gateway:
+    port: 80
+    instances: 3
+    resources:
+      requests:
+        cpu: "1"
+        memory: 1Gi
+      limits:
+        cpu: "1"
+        memory: 1Gi
+    placement:
+      podAntiAffinity:
+        preferredDuringSchedulingIgnoredDuringExecution:
+        - weight: 100
+          podAffinityTerm:
+            labelSelector:
+              matchLabels:
+                app: rook-ceph-rgw
+            topologyKey: kubernetes.io/hostname
+```
+
+- i have created this new ingress as well
+
+  ```
+
+  apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: rook-ceph-east-objstore-new
+  namespace: rook-ceph
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    external-dns.alpha.kubernetes.io/target: traefik-east-ui.kdc.logistics.corp
+spec:
+  rules:
+  - host: rook-ceph-objstore-new.kdc.logistics.corp
+    http:
+      paths:
+      - path: /
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: rook-ceph-rgw-ceph-object-store-new
+            port:
+              number: 80
+
+```
+- I have applied above files but still it doesnt show the new object store
+- i have checked using the Following command
+
+
+```
+kubectl get cephobjectstore
+```
