@@ -162,6 +162,7 @@ error - MountVolume.MountDevice failed for volume "pvc-c4e024ec-a22e-45db-856a-f
 
 # Creating multiple Objec stores
 
+- path - /mnt/c/Users/Uday/project_2026/newobjectstorecreation 
 - on iah-east, i have created this storage class
 
 ```
