@@ -246,10 +246,11 @@ spec:
               number: 80
 
 ```
+
 - I have applied above files but still it doesnt show the new object store
 - i have checked using the Following command
-
-
-```
-kubectl get cephobjectstore
-```
+- kubectl get cephobjectstore
+-  To check which pools are being used for existing ceph objecstore
+- ceph osd pool ls | grep object 
+- Do we have dedicated ceph pools, how to check it
+- ceph osd pool ls | grep object - Going by the list we can say---as shared pools will have a customized name
