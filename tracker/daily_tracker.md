@@ -14,5 +14,5 @@ Total - 2 hrs
 -----
 # 11th Feb 2026
 
-- GCP - 45 mins
+- GCP - 1hr 30 mins
 - 
