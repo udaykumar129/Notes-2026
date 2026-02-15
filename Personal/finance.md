@@ -26,3 +26,7 @@
       
 ## Aviation sector
 - fly sbs - Money purse took some allocation.
+
+## AI Stock
+- RNIT - Money purse invested. Hight risk and high reward. They are in to developing softwares for face recognition
+- Currently telugu states using it. This is as on 15th Feb
