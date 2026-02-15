@@ -7,7 +7,8 @@
 
 -As of 15th Feb 2026 mid caps doing better can be found below.
 
-<img width="1320" height="433" alt="image" src="https://github.com/user-attachments/assets/07e2d841-826b-43c1-b1d9-f5434ac0c755" />
+<img width="1321" height="451" alt="image" src="https://github.com/user-attachments/assets/83d298b7-193a-4e48-86d0-58a818fb290d" />
+
 
 ## Housing Finance
 ### Affordable Housing Finance
