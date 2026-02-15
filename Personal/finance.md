@@ -1,11 +1,13 @@
 ## Mutual funds
 - Lesson Learnt - Never to STP from liquid funds, they charge STCG if we sell with in less than 3 years
 - As of 15th Feb 2026- Quant mid cap, quant small cap, SBI small cap, kotak small cap, HSBC small cap are not doing good
-- As of 15th Feb 2026 - mirae asset small cap> quantum small cap > Bandhan Small cap > HDFC small cap > Invesco small cap > sundaram small cap > PGIM india small cap > BNP paribas small cap
+- As of 15th Feb 2026 small caps doing better can be found below
 
 <img width="1320" height="433" alt="image" src="https://github.com/user-attachments/assets/56a62204-2286-416a-9449-bd15d4909494" />
 
+-As of 15th Feb 2026 mid caps doing better can be found below.
 
+<img width="1320" height="433" alt="image" src="https://github.com/user-attachments/assets/07e2d841-826b-43c1-b1d9-f5434ac0c755" />
 
 ## Housing Finance
 ### Affordable Housing Finance
