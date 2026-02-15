@@ -1,3 +1,10 @@
+# Aim for
+
+- Finance - 30 mins
+- Cloud - 1 hr
+- Kubernetes - 1 hr
+- Badminton - 15 mins
+
 # 9th Feb 2026
 - kubernetes - 1 hr
 - RS - 30 mins
