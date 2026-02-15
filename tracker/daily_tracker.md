@@ -28,6 +28,7 @@ Total - 2 hrs
 # 14th Feb 2026
 
 - GCP - 1hr
+- kubernetes - 1hr
 
 ----
 
