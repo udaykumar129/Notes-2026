@@ -35,3 +35,4 @@ Total - 2 hrs
 # 15th Feb 2026
 
 - GCP - 1hr
+- Kuberentes - 1 hr till 1.2
