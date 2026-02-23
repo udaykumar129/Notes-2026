@@ -4,5 +4,5 @@ Every Monday...scale down crashloop backoff pods
 Disable cron jobs which are agressive
 IAH-East
 what quota is set on the other clusters
-add stage 
+move stage workloads - work with zia
 
