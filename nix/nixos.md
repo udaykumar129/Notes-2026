@@ -1,3 +1,22 @@
+# Nix Basics
+
+| Command | What it does |
+|---|---|
+| `/etc/nix/nix.conf` | Global Nix configuration |
+| `nix run 'nixpkgs#x'` | Run a package without installing it |
+| `nix shell 'nixpkgs#x'` | Temporary shell with package available |
+| `command -v hello` | Show where a binary is installed |
+| `ls /nix/store` | Browse all installed packages and deps |
+| `nix flake show` | Inspect what a flake exposes |
+| `nix run` | Run the default app of the current flake |
+| `nix build` | Build the current flake, output a symlink |
+| `result -> /nix/store/...` | Symlink pointing to built output in store |
+| `nix develop` | Enter a reproducible dev environment |
+
+## Videos
+
+- [Getting Started with Nix ](https://www.youtube.com/watch?v=xXlCcdPz6Vc&t=1204s)
+
 # Nix Package Manager — Installation Guide (Ubuntu)
 
 > **Note:** This guide installs the **Nix package manager** on Ubuntu.
@@ -110,3 +129,7 @@ sudo userdel nixbld1  # repeat for nixbld1–nixbld32
 - [Nixpkgs Package Search](https://search.nixos.org/packages)
 - [Nix Pills (beginner guide)](https://nixos.org/guides/nix-pills/)
 - [Flakes Guide](https://nixos.wiki/wiki/Flakes)
+
+
+
+
