@@ -1,0 +1,11 @@
+- There is an architecture diagram only
+- sb-mgt subscritption - related to logging- it is not there in diagram 
+- sb-ssh - network related ( FW )
+- This needs to be moved to UK-South
+- azure firewall needs to be replicated ( Active/Active)  to UK south from UAE North
+- talk to Dinesh...about what all needs to be done
+- earlier when Teams spoke....he was expecting the documentation/procedure
+- Santosh & Vijay working on DR part
+- sd-id ( domain server )
+- These three fall under hub subscription
+- There is no documentation...whatsoever
