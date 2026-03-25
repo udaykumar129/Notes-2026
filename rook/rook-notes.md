@@ -1,4 +1,18 @@
+# mon pod getting restarted - solution given by santosh
 
+- cordon oel9 nodes
+- scale down operator deployment
+- Move one at a time mon  
+- mon pod from oel node to centos 7 ,
+- delete one mon deployment - and service 
+- remove mon manually from ceph - ceph mon remove bw
+- update configmap by deleting the entries of respective mon  -- k edit cm rook-ceph-mon-endpoints  
+- scale operator deployment.
+- test pool creation
+- uncordon oel9 nodes
+
+
+---
 # Testing Life Cycle Configuration for S3 Buckets in rook-ceph
 
 - Create a bucket in USDC East with life cycle snippet and without snippet
